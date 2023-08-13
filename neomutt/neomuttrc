@@ -1,0 +1,20 @@
+# NeoMutt configuration
+
+# Personal information
+set from = "ojandjess1gmail.com"
+set realname = "Oliver MacDonld"
+
+# Default Mailbox
+set spoolfile = imaps://imap.gmail.com/INBOX
+
+# Aliases
+source ~/.mutt/aliases
+
+# Use the "neomutt" sidebar
+source ~/.mutt/sidebar
+
+# Allow moving emails between mailboxes
+set move = yes
+
+# Index format for date, sender, and subject columns
+set index_format="%4C %Z %{%b %d} %-15.15L (%4l) %?M?(+%M%) ? %-30.30s"

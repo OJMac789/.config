@@ -1,0 +1,202 @@
+#+TITLE: Zer0j's GNU Emacs Configuration
+#+AUTHOR: Zer0j
+#+DESCRIPTION: Zer0j's Personal Emacs Config
+#+STARTUP: showeverything
+#+OTPIONS: toc:2
+
+* IMPORTANT PROGRAMS TO LOAD FIRST
+
+** Elpaca Package Manager
+
+#+begin_src emacs-lisp
+(defvar elpaca-installer-version 0.5)
+(defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
+(defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
+(defvar elpaca-repos-directory (expand-file-name "repos/" elpaca-directory))
+(defvar elpaca-order '(elpaca :repo "https://github.com/progfolio/elpaca.git"
+                              :ref nil
+                              :files (:defaults (:exclude "extensions"))
+                              :build (:not elpaca--activate-package)))
+(let* ((repo  (expand-file-name "elpaca/" elpaca-repos-directory))
+       (build (expand-file-name "elpaca/" elpaca-builds-directory))
+       (order (cdr elpaca-order))
+       (default-directory repo))
+  (add-to-list 'load-path (if (file-exists-p build) build repo))
+  (unless (file-exists-p repo)
+    (make-directory repo t)
+    (when (< emacs-major-version 28) (require 'subr-x))
+    (condition-case-unless-debug err
+        (if-let ((buffer (pop-to-buffer-same-window "*elpaca-bootstrap*"))
+                 ((zerop (call-process "git" nil buffer t "clone"
+                                       (plist-get order :repo) repo)))
+                 ((zerop (call-process "git" nil buffer t "checkout"
+                                       (or (plist-get order :ref) "--"))))
+                 (emacs (concat invocation-directory invocation-name))
+                 ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
+                                       "--eval" "(byte-recompile-directory \".\" 0 'force)")))
+                 ((require 'elpaca))
+                 ((elpaca-generate-autoloads "elpaca" repo)))
+            (progn (message "%s" (buffer-string)) (kill-buffer buffer))
+          (error "%s" (with-current-buffer buffer (buffer-string))))
+      ((error) (warn "%s" err) (delete-directory repo 'recursive))))
+  (unless (require 'elpaca-autoloads nil t)
+    (require 'elpaca)
+    (elpaca-generate-autoloads "elpaca" repo)
+    (load "./elpaca-autoloads")))
+(add-hook 'after-init-hook #'elpaca-process-queues)
+(elpaca `(,@elpaca-order))
+
+;; Install use-package support
+(elpaca elpaca-use-package
+  ;; Enable :elpaca use-package keyword.
+  (elpaca-use-package-mode)
+  ;; Assume :elpaca t unless otherwise specified.
+  (setq elpaca-use-package-by-default t))
+
+;; Block until current queue processed.
+(elpaca-wait)
+
+;;When installing a package which modifies a form used at the top-level
+;;(e.g. a package which adds a use-package key word),
+;;use `elpaca-wait' to block until that package has been installed/configured.
+;;For example:
+;;(use-package general :demand t)
+;;(elpaca-wait)
+
+;; Expands to: (elpaca evil (use-package evil :demand t))
+(use-package evil :demand t)
+
+;;Turns off elpaca-use-package-mode current declartion
+;;Note this will cause the declaration to be interpreted immediately (not deferred).
+;;Useful for configuring built-in emacs features.
+(use-package emacs :elpaca nil :config (setq ring-bell-function #'ignore))
+
+;; Don't install anything. Defer execution of BODY
+(elpaca nil (message "deferred"))
+
+#end_src
+
+** Evil Mode
+
+#+begin_src emacs-lisp
+
+;; Set up package.el to work with MELPA
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
+(package-refresh-contents)
+
+;; Download Evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
+
+#end_src
+
+
+** General Keybindings
+
+#+begin_src emacs-lisp
+(require 'general)
+
+;; * Global Keybindings
+;; `general-define-key' acts like `evil-define-key' when :states is specified
+(general-define-key
+ :states 'motion
+ ;; swap ; and :
+ ";" 'evil-ex
+ ":" 'evil-repeat-find-char)
+;; same as
+(general-define-key
+ :states 'motion
+ ";" 'evil-ex
+ ":" 'evil-repeat-find-char)
+;; `general-def' can be used instead for `evil-global-set-key'-like syntax
+(general-def 'motion
+  ";" 'evil-ex
+  ":" 'evil-repeat-find-char)
+
+;; alternative using `general-translate-key'
+;; swap ; and : in `evil-motion-state-map'
+(general-swap-key nil 'motion
+  ";" ":")
+
+;; * Mode Keybindings
+(general-define-key
+ :states 'normal
+ :keymaps 'emacs-lisp-mode-map
+ ;; or xref equivalent
+ "K" 'elisp-slime-nav-describe-elisp-thing-at-point)
+;; `general-def' can be used instead for `evil-define-key'-like syntax
+(general-def 'normal emacs-lisp-mode-map
+  "K" 'elisp-slime-nav-describe-elisp-thing-at-point)
+
+;; * Prefix Keybindings
+;; :prefix can be used to prevent redundant specification of prefix keys
+;; again, variables are not necessary and likely not useful if you are only
+;; using a definer created with `general-create-definer' for the prefixes
+;; (defconst my-leader "SPC")
+;; (defconst my-local-leader "SPC m")
+
+(general-create-definer my-leader-def
+  ;; :prefix my-leader
+  :prefix "SPC")
+
+(general-create-definer my-local-leader-def
+  ;; :prefix my-local-leader
+  :prefix "SPC m")
+
+;; ** Global Keybindings
+(my-leader-def
+  :keymaps 'normal
+  ;; bind "SPC a"
+  "a" 'org-agenda
+  "b" 'counsel-bookmark
+  "c" 'org-capture)
+;; `general-create-definer' creates wrappers around `general-def', so
+;; `evil-global-set-key'-like syntax is also supported
+(my-leader-def 'normal
+  "a" 'org-agenda
+  "b" 'counsel-bookmark
+  "c" 'org-capture)
+
+;; to prevent your leader keybindings from ever being overridden (e.g. an evil
+;; package may bind "SPC"), use :keymaps 'override
+(my-leader-def
+  :states 'normal
+  :keymaps 'override
+  "a" 'org-agenda)
+;; or
+(my-leader-def 'normal 'override
+  "a" 'org-agenda)
+
+;; ** Mode Keybindings
+(my-local-leader-def
+  :states 'normal
+  :keymaps 'org-mode-map
+  "y" 'org-store-link
+  "p" 'org-insert-link
+  ;; ...
+  )
+;; `general-create-definer' creates wrappers around `general-def', so
+;; `evil-define-key'-like syntax is also supported
+(my-local-leader-def 'normal org-mode-map
+  "y" 'org-store-link
+  "p" 'org-insert-link
+  ;; ...
+  )
+
+;; * Settings
+;; change evil's search module after evil has been loaded (`setq' will not work)
+(general-setq evil-search-module 'evil-search)
+#end_src
+
+** Org Mode
+
+
+
+**

@@ -1,0 +1,31 @@
+2023-08-06T15:55:26.904Z - info: [ui] [AppStore] loading 0 repositories from store
+2023-08-06T15:55:26.979Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2023-08-06T15:55:27.014Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2023-08-06T15:55:27.021Z - info: [ui] launching: 3.2.5-linux1 (Linux 6.4.8-arch1-1)
+2023-08-06T15:55:27.022Z - info: [ui] execPath: '/opt/github-desktop/github-desktop'
+2023-08-06T15:55:27.073Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2023-08-06T15:55:27.078Z - info: [ui] Opt in reported.
+2023-08-06T15:55:31.278Z - info: [ui] [Welcome] advancing to step: SignInToDotComWithBrowser
+2023-08-06T15:55:31.280Z - info: [ui] [SignInStore] initializing OAuth flow
+2023-08-06T15:55:31.284Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=453917d8-a178-490b-b118-0f78c6829167
+2023-08-06T15:55:31.285Z - info: [ui] [Welcome] current sign in state not found. ignoring...
+2023-08-06T15:55:32.513Z - info: [ui] [Welcome] kind Authentication is the same as Authentication. ignoring...
+2023-08-06T15:55:32.683Z - info: [ui] [Welcome] kind Authentication is the same as Authentication. ignoring...
+2023-08-06T15:55:38.589Z - info: [ui] [Welcome] kind Authentication is the same as Authentication. ignoring...
+2023-08-06T15:55:59.203Z - info: [main] Received possible protocol arguments: 3
+2023-08-06T15:55:59.203Z - info: [main] Processing protocol url
+2023-08-06T15:55:59.211Z - info: [ui] [Dispatcher] requesting authenticated user
+2023-08-06T15:55:59.286Z - info: [main] Received possible protocol arguments: 2
+2023-08-06T15:55:59.288Z - info: [main] Processing protocol url
+2023-08-06T15:55:59.812Z - info: [ui] [SignInStore] account resolved
+2023-08-06T15:55:59.813Z - info: [ui] [AppStore] adding account OJMac789 (OJMac789) to store
+2023-08-06T15:56:00.041Z - info: [ui] Subscribed 'OJMac789' to Alive channel
+2023-08-06T15:56:00.095Z - info: [ui] [Welcome] advancing to step: ConfigureGit
+2023-08-06T15:56:01.095Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2023-08-06T15:56:02.871Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2023-08-06T15:57:10.065Z - info: [ui] [AppStore] adding repository at /home/zer0/helm-posframe to store
+2023-08-06T15:57:10.597Z - info: [ui] [BranchPruner] No branches to prune.
+2023-08-06T15:57:30.154Z - info: [ui] [AppStore] adding repository at /home/zer0/helm-posframe_myfork to store
+2023-08-06T15:57:44.301Z - info: [ui] [AppStore.withAuthenticatingUser] account found for repository: helm-posframe - OJMac789 (has token)
+2023-08-06T15:57:45.404Z - info: [ui] [RepositoryIndicatorUpdater]: Refreshing sidebar indicators for 2 repositories took 1.2s of which 0.0s paused, total 1.2s
+2023-08-06T15:58:14.762Z - info: [ui] [BranchPruner] Last prune took place 1 minute ago - skipping

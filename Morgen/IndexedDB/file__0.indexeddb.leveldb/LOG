@@ -1,0 +1,66 @@
+2023/08/10-09:02:30.951 1457d Reusing MANIFEST /home/zer0/.config/Morgen/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2023/08/10-09:02:30.951 1457d Recovering log #106
+2023/08/10-09:02:30.955 1457d Reusing old log /home/zer0/.config/Morgen/IndexedDB/file__0.indexeddb.leveldb/000106.log 
+2023/08/10-10:02:36.481 1457d Level-0 table #111: started
+2023/08/10-10:02:36.505 1457d Level-0 table #111: 805769 bytes OK
+2023/08/10-10:02:36.506 1457d Delete type=0 #106
+2023/08/10-10:02:48.547 1457c Compacting 1@1 + 1@2 files
+2023/08/10-10:02:48.571 1457c Generated table #112@1: 8317 keys, 472243 bytes
+2023/08/10-10:02:48.571 1457c Compacted 1@1 + 1@2 files => 472243 bytes
+2023/08/10-10:02:48.573 1457c compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/08/10-10:02:48.573 1457c Delete type=2 #111
+2023/08/10-10:02:48.573 1457c Delete type=2 #108
+2023/08/10-11:09:08.116 1457d Level-0 table #114: started
+2023/08/10-11:09:08.132 1457d Level-0 table #114: 795377 bytes OK
+2023/08/10-11:09:08.134 1457d Delete type=0 #110
+2023/08/10-11:09:20.671 1457c Compacting 1@1 + 1@2 files
+2023/08/10-11:09:20.699 1457c Generated table #115@1: 8508 keys, 481682 bytes
+2023/08/10-11:09:20.699 1457c Compacted 1@1 + 1@2 files => 481682 bytes
+2023/08/10-11:09:20.700 1457c compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/08/10-11:09:20.700 1457c Delete type=2 #114
+2023/08/10-11:09:20.700 1457c Delete type=2 #112
+2023/08/10-12:15:45.725 1457d Level-0 table #117: started
+2023/08/10-12:15:45.746 1457d Level-0 table #117: 788112 bytes OK
+2023/08/10-12:15:45.748 1457d Delete type=0 #113
+2023/08/10-12:16:00.949 1457d Compacting 1@1 + 1@2 files
+2023/08/10-12:16:00.969 1457d Generated table #118@1: 8687 keys, 487392 bytes
+2023/08/10-12:16:00.969 1457d Compacted 1@1 + 1@2 files => 487392 bytes
+2023/08/10-12:16:00.971 1457d compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/08/10-12:16:00.971 1457d Delete type=2 #117
+2023/08/10-12:16:00.971 1457d Delete type=2 #115
+2023/08/10-13:22:21.635 1457d Level-0 table #120: started
+2023/08/10-13:22:21.651 1457d Level-0 table #120: 781520 bytes OK
+2023/08/10-13:22:21.652 1457d Delete type=0 #116
+2023/08/10-13:22:35.548 1457c Compacting 1@1 + 1@2 files
+2023/08/10-13:22:35.567 1457c Generated table #121@1: 8869 keys, 494875 bytes
+2023/08/10-13:22:35.567 1457c Compacted 1@1 + 1@2 files => 494875 bytes
+2023/08/10-13:22:35.569 1457c compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/08/10-13:22:35.569 1457c Delete type=2 #120
+2023/08/10-13:22:35.569 1457c Delete type=2 #118
+2023/08/10-14:29:06.208 1457d Level-0 table #123: started
+2023/08/10-14:29:06.224 1457d Level-0 table #123: 787230 bytes OK
+2023/08/10-14:29:06.226 1457d Delete type=0 #119
+2023/08/10-14:29:21.438 1457d Compacting 1@1 + 1@2 files
+2023/08/10-14:29:21.461 1457d Generated table #124@1: 9051 keys, 502770 bytes
+2023/08/10-14:29:21.461 1457d Compacted 1@1 + 1@2 files => 502770 bytes
+2023/08/10-14:29:21.462 1457d compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/08/10-14:29:21.462 1457d Delete type=2 #123
+2023/08/10-14:29:21.462 1457d Delete type=2 #121
+2023/08/10-15:34:26.403 1457d Level-0 table #126: started
+2023/08/10-15:34:26.427 1457d Level-0 table #126: 796830 bytes OK
+2023/08/10-15:34:26.429 1457d Delete type=0 #122
+2023/08/10-15:34:38.429 1457c Compacting 1@1 + 1@2 files
+2023/08/10-15:34:38.449 1457c Generated table #127@1: 9232 keys, 510033 bytes
+2023/08/10-15:34:38.449 1457c Compacted 1@1 + 1@2 files => 510033 bytes
+2023/08/10-15:34:38.450 1457c compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/08/10-15:34:38.451 1457c Delete type=2 #126
+2023/08/10-15:34:38.451 1457c Delete type=2 #124
+2023/08/10-16:41:06.291 1457d Level-0 table #129: started
+2023/08/10-16:41:06.313 1457d Level-0 table #129: 785788 bytes OK
+2023/08/10-16:41:06.315 1457d Delete type=0 #125
+2023/08/10-16:41:20.589 1457d Compacting 1@1 + 1@2 files
+2023/08/10-16:41:20.613 1457d Generated table #130@1: 9421 keys, 517331 bytes
+2023/08/10-16:41:20.613 1457d Compacted 1@1 + 1@2 files => 517331 bytes
+2023/08/10-16:41:20.615 1457d compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/08/10-16:41:20.615 1457d Delete type=2 #129
+2023/08/10-16:41:20.615 1457d Delete type=2 #127

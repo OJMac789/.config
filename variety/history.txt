@@ -1,0 +1,5 @@
+0
+/home/zer0/.config/variety/Favorites/nord_triangles.png
+/home/zer0/.config/variety/Favorites/nord_scenary.png
+/usr/share/backgrounds/arcolinux-candy/candy-02.jpg
+/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg

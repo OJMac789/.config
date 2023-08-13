@@ -1,0 +1,18 @@
+2023/08/10-09:02:29.860 145af Reusing MANIFEST /home/zer0/.config/Morgen/Local Storage/leveldb/MANIFEST-000001
+2023/08/10-09:02:29.861 145af Recovering log #24
+2023/08/10-09:02:29.861 145af Reusing old log /home/zer0/.config/Morgen/Local Storage/leveldb/000024.log 
+2023/08/10-12:00:30.525 1457c Level-0 table #28: started
+2023/08/10-12:00:30.529 1457c Level-0 table #28: 9651 bytes OK
+2023/08/10-12:00:30.530 1457c Delete type=0 #24
+2023/08/10-12:00:30.530 1457c Compacting 4@0 + 1@1 files
+2023/08/10-12:00:30.533 1457c Generated table #29@0: 84 keys, 3897 bytes
+2023/08/10-12:00:30.533 1457c Compacted 4@0 + 1@1 files => 3897 bytes
+2023/08/10-12:00:30.534 1457c compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/08/10-12:00:30.534 1457c Delete type=2 #20
+2023/08/10-12:00:30.534 1457c Delete type=2 #25
+2023/08/10-12:00:30.534 1457c Delete type=2 #18
+2023/08/10-12:00:30.534 1457c Delete type=2 #28
+2023/08/10-12:00:30.534 1457c Delete type=2 #23
+2023/08/10-16:24:30.525 1457d Level-0 table #31: started
+2023/08/10-16:24:30.530 1457d Level-0 table #31: 8929 bytes OK
+2023/08/10-16:24:30.532 1457d Delete type=0 #27

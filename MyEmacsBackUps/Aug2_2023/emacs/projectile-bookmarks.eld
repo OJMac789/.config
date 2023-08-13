@@ -1,0 +1,1 @@
+("~/org-roam/" "~/.config/emacs/elpaca/repos/helm-posframe/" "~/.config/emacs/elpaca/builds/helm-posframe/" "~/.config/MyDoomBackup/emacs/" "~/org/")

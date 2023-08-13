@@ -1,0 +1,19 @@
+2023/08/06-17:13:20.003 11e5a0 Reusing MANIFEST /home/zer0/.config/whatsapp-nativefier-d40211/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/08/06-17:13:20.003 11e5a0 Recovering log #17
+2023/08/06-17:13:20.018 11e5a0 Reusing old log /home/zer0/.config/whatsapp-nativefier-d40211/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000017.log 
+2023/08/06-17:13:35.692 11e60c Level-0 table #24: started
+2023/08/06-17:13:35.725 11e60c Level-0 table #24: 1095160 bytes OK
+2023/08/06-17:13:35.727 11e60c Delete type=0 #17
+2023/08/06-17:13:35.736 11e59f Compacting 1@0 + 1@1 files
+2023/08/06-17:13:35.791 11e59f Generated table #25@0: 52860 keys, 1048689 bytes
+2023/08/06-17:13:35.791 11e59f Compacted 1@0 + 1@1 files => 1048689 bytes
+2023/08/06-17:13:35.792 11e59f compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/08/06-17:13:35.792 11e59f Delete type=2 #20
+2023/08/06-17:13:35.792 11e59f Delete type=2 #24
+2023/08/06-17:13:36.010 11e59f Compacting 1@1 + 1@2 files
+2023/08/06-17:13:36.058 11e59f Generated table #26@1: 52704 keys, 2211773 bytes
+2023/08/06-17:13:36.066 11e59f Generated table #27@1: 14179 keys, 281772 bytes
+2023/08/06-17:13:36.066 11e59f Compacted 1@1 + 1@2 files => 2493545 bytes
+2023/08/06-17:13:36.067 11e59f compacted to: files[ 0 0 2 0 0 0 0 ]
+2023/08/06-17:13:36.067 11e59f Delete type=2 #21
+2023/08/06-17:13:36.067 11e59f Delete type=2 #25

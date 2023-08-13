@@ -1,0 +1,1 @@
+/home/zer0/.config/emacs/elpaca/repos/all-the-icons/all-the-icons.el
